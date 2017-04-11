@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+  before_action :authorize!, except: [:stories, :show]
 
   # GET /stories
   def index
