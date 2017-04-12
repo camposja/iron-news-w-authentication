@@ -24,6 +24,7 @@ class StoriesController < ApplicationController
   # POST /stories
   def create
     @story = Story.new(story_params)
+    @story.created_by = current_user
 
     if @story.save
       redirect_to @story, notice: 'Story was successfully created.'
