@@ -39,18 +39,17 @@
           <li class="active"><%= link_to "Home", root_path %></li>
         </ul>
         <% if logged_in? %>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <%= link_to "| New Story |", new_story_path %>
-          </li>
-        </ul>
-
           <ul class="nav navbar-nav navbar-right">
             <li>
               <p class="navbar-text">| Logged in: <%= current_user.name %> |</p>
             </li>
             <li>
               <%= link_to "| Logout |", logout_path %>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to "| New Story |", new_story_path %>
             </li>
           </ul>
         <% else %>
