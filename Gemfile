@@ -52,6 +52,11 @@ gem 'bootstrap-generators', git: 'https://github.com/gstark/bootstrap-generators
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
+# Image uploading support
+gem 'shrine'
+gem 'shrine-sql'
+gem 'roda'
+
 group :development do
   gem 'dotenv-rails'
 end

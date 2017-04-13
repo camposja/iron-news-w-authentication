@@ -4,10 +4,14 @@ Rails.application.routes.draw do
   root 'stories#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/signup' => 'users#new'
+  get  '/signup' => 'users#new'
   post '/users' => 'users#create'
 
-  get '/login' => 'sessions#new'
+  get  '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get  '/logout' => 'sessions#destroy'
 end
+
+# do
+#  mount Shrine::DownloadEndpoint => "/attachments"
+#end
