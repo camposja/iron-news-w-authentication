@@ -1,13 +1,13 @@
 <div class="page-header">
-  <%= link_to stories_path, class: 'btn btn-default' do %>
+  <%= link_to stories_path, class: 'btn btn-success' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <%= link_to edit_story_path(@story), class: 'btn btn-primary' do %>
+  <%= link_to edit_story_path(@story), class: 'btn btn-success' do %>
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show story</h1>
+  <h1>Article display</h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -21,6 +21,6 @@
   <dd><%= @story.email %></dd>
 
   <dt>Image:</dt>
-  <dd><%= image_tag(@story.image_url, size: "400") %></dd>
+  <dd><%= image_tag(@story.image_url, size: "350") %></dd>
 
 </dl>
