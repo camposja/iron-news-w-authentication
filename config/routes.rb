@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   get  '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get  '/logout' => 'sessions#destroy'
-end
 
-# do
-#  mount Shrine::DownloadEndpoint => "/attachments"
-#end
+  mount Shrine::DownloadEndpoint => "/attachments"
+end

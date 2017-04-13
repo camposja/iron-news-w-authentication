@@ -8,14 +8,15 @@
       <div class="media">
         <div class="media-left">
           <a href="#">
-            <img class="media-object" src="http://rubyonrails.org/images/rails-logo.svg" height="72" width="72">
+            <img class="media-object" src="<%= story.image_url %>" height="72" width="72">
           </a>
         </div>
         <div class="media-body">
           <h4 class="media-heading"><small><%= index + 1 %></small>.  <%= link_to story.title, story.link %></h4>
           <%= story.email %>
-          | <small><%= story.created_at %></small> |
-
+          <ul>
+            <li>| posted on: <small><%= story.created_at %></small> |</li>
+          </ul>
           <div class="pull-right">
             <%= link_to story do %>
               <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
